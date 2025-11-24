@@ -8,9 +8,9 @@ importers:
 
   .:
     dependencies:
-      insert-coin:
-        specifier: file:../insert-coin
-        version: file:../insert-coin
+      '@bordalix/insert-coin':
+        specifier: ^0.0.1
+        version: 0.0.1
       nipplejs:
         specifier: ^0.10.2
         version: 0.10.2
@@ -18,6 +18,9 @@ importers:
         specifier: ^0.4.2
         version: 0.4.2
     devDependencies:
+      prettier:
+        specifier: 3.6.2
+        version: 3.6.2
       typescript:
         specifier: ~5.8.3
         version: 5.8.3
@@ -27,13 +30,17 @@ importers:
 
 packages:
 
-  '@arkade-os/boltz-swap@file:../../arkade-os/boltz-swap':
-    resolution: {directory: ../../arkade-os/boltz-swap, type: directory}
+  '@arkade-os/boltz-swap@0.2.10':
+    resolution: {integrity: sha512-lNIc9mzYn8Fiqq8aDoE5Au3nFaXVSjquojbhOHYHlqgIxzUJe/caf5Fiz4dWzjr1rliAjOu9ofwG3xvnn6Mcag==}
     engines: {node: '>=22'}
 
   '@arkade-os/sdk@0.3.7':
     resolution: {integrity: sha512-uXRf3uXc+YKZA0nnPe/gM6QKGTB4xlQn+EHPU3PliCp7fWTDYnPX/QzWszNY5Y71/FWMebrUgHFyDk6XnlQOrw==}
     engines: {node: '>=20.0.0'}
+
+  '@bordalix/insert-coin@0.0.1':
+    resolution: {integrity: sha512-SBvcvqhFhhR1NiE5zmT2VCtFf6R/QtYpCEea2mzrNpnf1uDaQmnto96e33mKB7IK2wePwSDPF9YNykNmFJ/W4w==}
+    engines: {node: '>=22'}
 
   '@esbuild/aix-ppc64@0.25.4':
     resolution: {integrity: sha512-1VCICWypeQKhVbE9oW/sJaAmjLxhVqacdkvPLEjwlttjfwENRSClS8EjBz0KzRyFSCPDIkuXW34Je/vk7zdB7Q==}
@@ -334,10 +341,6 @@ packages:
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
 
-  insert-coin@file:../insert-coin:
-    resolution: {directory: ../insert-coin, type: directory}
-    engines: {node: '>=22'}
-
   light-bolt11-decoder@3.2.0:
     resolution: {integrity: sha512-3QEofgiBOP4Ehs9BI+RkZdXZNtSys0nsJ6fyGeSiAGCBsMwHGUDS/JQlY/sTnWs91A2Nh0S9XXfA8Sy9g6QpuQ==}
 
@@ -363,6 +366,11 @@ packages:
   postcss@8.5.3:
     resolution: {integrity: sha512-dle9A3yYxlBSrt8Fu+IpjGT8SY8hN0mlaA6GY8t0P5PjIOZemULz/E2Bnm/2dcUOena75OTNkHI76uZBNUUq3A==}
     engines: {node: ^10 || ^12 || >=14}
+
+  prettier@3.6.2:
+    resolution: {integrity: sha512-I7AIg5boAr5R0FFtJ6rCfD+LFsWHp81dolrFD8S79U9tb8Az2nGrJncnMSnys+bpQJfRUzqs9hnA81OAA3hCuQ==}
+    engines: {node: '>=14'}
+    hasBin: true
 
   qr@0.4.2:
     resolution: {integrity: sha512-wCv4rt7IcPNGT0J8JiTBHx7YrZzYuzpof38y/MFYd5Sp7OTyAFYL1e110In8PrAG/ffIOVl1ha3joJ2zpYxKMQ==}
@@ -431,7 +439,7 @@ packages:
 
 snapshots:
 
-  '@arkade-os/boltz-swap@file:../../arkade-os/boltz-swap':
+  '@arkade-os/boltz-swap@0.2.10':
     dependencies:
       '@arkade-os/sdk': 0.3.7
       '@noble/hashes': 2.0.1
@@ -446,6 +454,12 @@ snapshots:
       '@scure/base': 2.0.0
       '@scure/btc-signer': 2.0.1
       bip68: 1.0.4
+
+  '@bordalix/insert-coin@0.0.1':
+    dependencies:
+      '@arkade-os/boltz-swap': 0.2.10
+      '@arkade-os/sdk': 0.3.7
+      qr: 0.5.2
 
   '@esbuild/aix-ppc64@0.25.4':
     optional: true
@@ -642,12 +656,6 @@ snapshots:
   fsevents@2.3.3:
     optional: true
 
-  insert-coin@file:../insert-coin:
-    dependencies:
-      '@arkade-os/boltz-swap': file:../../arkade-os/boltz-swap
-      '@arkade-os/sdk': 0.3.7
-      qr: 0.5.2
-
   light-bolt11-decoder@3.2.0:
     dependencies:
       '@scure/base': 1.1.1
@@ -669,6 +677,8 @@ snapshots:
       nanoid: 3.3.11
       picocolors: 1.1.1
       source-map-js: 1.2.1
+
+  prettier@3.6.2: {}
 
   qr@0.4.2: {}
 

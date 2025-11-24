@@ -1,91 +1,91 @@
 :root {
-  --color-red: #f66;
-  --color-black: #222;
-  --color-white: #ddd;
-  --color-purple: #7652e1;
+    --color-red: #f66;
+    --color-black: #222;
+    --color-white: #ddd;
+    --color-purple: #7652e1;
 }
 
 body,
 html {
-  font-weight: 400;
-  font-style: normal;
-  font-family: 'Play', sans-serif;
-  background-color: var(--color-black);
-  color: var(--color-white);
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  margin: 0;
+    font-weight: 400;
+    font-style: normal;
+    font-family: "Play", sans-serif;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    margin: 0;
 }
 
 canvas {
-  margin: auto;
-  display: block;
-  image-rendering: optimizeSpeed;
-  image-rendering: -moz-crisp-edges;
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: optimize-contrast;
+    margin: auto;
+    display: block;
+    image-rendering: optimizeSpeed;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: optimize-contrast;
 }
 
 h1 {
-  font-size: 1.8rem;
-  margin: 1rem 0;
+    font-size: 1.8rem;
+    margin: 1rem 0;
 }
 
 a {
-  color: inherit;
-  text-decoration: underline;
+    color: inherit;
+    text-decoration: underline;
 }
 
 footer {
-  position: absolute;
-  bottom: 1rem;
-  width: 100%;
-  text-align: center;
-  font-size: 0.8rem;
-  color: #555;
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #555;
 }
 
 #paywall {
-  margin-top: 1rem;
-  text-align: center;
+    margin-top: 1rem;
+    text-align: center;
 }
 
 #container {
-  max-width: 100%;
+    max-width: 100%;
 }
 
 #insertCoin {
-  background-color: var(--color-black);
-  border: 1px solid var(--color-purple);
-  text-transform: uppercase;
-  color: var(--color-purple);
-  border-radius: 6px;
-  font-weight: 700;
-  max-width: 200px;
-  cursor: pointer;
-  margin: 0 auto;
-  padding: 1rem;
+    background-color: var(--color-black);
+    border: 1px solid var(--color-purple);
+    text-transform: uppercase;
+    color: var(--color-purple);
+    border-radius: 6px;
+    font-weight: 700;
+    max-width: 200px;
+    cursor: pointer;
+    margin: 0 auto;
+    padding: 1rem;
 }
 
 #qrCode {
-  width: 300px;
-  min-height: 300px;
-  margin: 1rem auto;
-  & > img {
-    border-radius: 6px;
-    max-height: 100%;
-    max-width: 100%;
-  }
+    width: 300px;
+    min-height: 300px;
+    margin: 1rem auto;
+    & > img {
+        border-radius: 6px;
+        max-height: 100%;
+        max-width: 100%;
+    }
 }
 
 #qrData {
-  color: #999;
-  cursor: pointer;
-  max-width: 300px;
-  overflow: hidden;
-  margin: 1rem auto;
-  text-align: center;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+    color: #999;
+    cursor: pointer;
+    max-width: 300px;
+    overflow: hidden;
+    margin: 1rem auto;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
